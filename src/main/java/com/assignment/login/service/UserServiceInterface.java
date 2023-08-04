@@ -6,4 +6,5 @@ public interface UserServiceInterface
 { 
     public abstract String checkLogin(User user);
     public abstract boolean saveUser(User user);
+    public abstract String getName( String email);
 }

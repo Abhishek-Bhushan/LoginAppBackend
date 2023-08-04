@@ -2,6 +2,7 @@ package com.assignment.login.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import com.assignment.login.dao.UserDAO;
 import com.assignment.login.model.User;
@@ -31,6 +32,10 @@ public class UserService implements UserServiceInterface
 
     public boolean saveUser(User user){
         return userDAO.saveUser(user);
+    }
+
+    public String getName( String email){
+        return userDAO.getName(email) ;
     }
     
 }

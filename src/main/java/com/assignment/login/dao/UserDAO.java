@@ -27,4 +27,9 @@ public class UserDAO implements UserDAOInterface{
         }
         return false;
     }
+
+    public String getName( String email){
+        User user = userRepository.findByEmail(email);
+        return  user.getName();
+    }
 }
